@@ -13,7 +13,8 @@ const files = readdirSync(currentDirectoryPath)
 let barrelFileContent = ``
 
 files.forEach((file) => {
-  const [fileName, fileExtension] = file.split('.')
+  const [fileExtension] = file.split('.').reverse()
+  const [fileName] = file.split(`.${fileExtension}`)
 
   if (!fileExtension || fileExtension === 'ts' || fileExtension === 'tsx') {
     const fileContent = `export * from './${fileName}'`
