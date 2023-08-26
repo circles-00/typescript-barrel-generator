@@ -1,0 +1,14 @@
+{
+  "name": "typescript-barrel-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "typescript-barrel-generator.js",
+  "scripts": {
+    "start": "node typescript-barrel-generator.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Nikola Krezeski <nkrezeski1@gmail.com>",
+  "license": "ISC",
+}
