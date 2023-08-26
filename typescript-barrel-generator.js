@@ -14,9 +14,11 @@ let barrelFileContent = ``
 
 files.forEach((file) => {
   const [fileExtension] = file.split('.').reverse()
-  const [fileName] = file.split(`.${fileExtension}`)
 
-  if (!fileExtension || fileExtension === 'ts' || fileExtension === 'tsx') {
+  const fileParts = file.split(`.${fileExtension}`)
+  const [fileName] = fileParts
+
+  if (fileParts.length === 1 || fileExtension === 'ts' || fileExtension === 'tsx') {
     const fileContent = `export * from './${fileName}'`
     barrelFileContent += `${fileContent}\n`
   }
