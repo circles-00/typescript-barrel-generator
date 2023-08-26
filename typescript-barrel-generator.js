@@ -10,8 +10,6 @@ if (args.length === 0) {
 const [currentDirectoryPath] = args
 const files = readdirSync(currentDirectoryPath)
 
-console.log(files)
-
 let barrelFileContent = ``
 
 files.forEach((file) => {
