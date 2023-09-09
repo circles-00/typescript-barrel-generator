@@ -18,7 +18,7 @@ files.forEach((file) => {
   const fileParts = file.split(`.${fileExtension}`)
   const [fileName] = fileParts
 
-  if (fileParts.length === 1 || fileExtension === 'ts' || fileExtension === 'tsx') {
+  if ((fileParts.length === 1 || fileExtension === 'ts' || fileExtension === 'tsx') && fileName !== 'index') {
     const fileContent = `export * from './${fileName}'`
     barrelFileContent += `${fileContent}\n`
   }
